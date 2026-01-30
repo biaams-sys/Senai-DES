@@ -1,0 +1,5 @@
+Comando vscode
+npm init
+npm install express
+npm install cors
+npm install mysql2
