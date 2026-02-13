@@ -1,0 +1,15 @@
+Comandos para autentificar user na web
+git config --global user.name "biaams-sys"
+git config --global user.email "biaams16@gmail.com"
+
+comandos para clonar repositório
+git clone https://github.com/biaams-sys/Senai-DES.git
+
+comando para atualizar repositório
+git add .
+git commit -m "comentário"
+git push
+
+comando para atualizar arquivo
+git pull
+

@@ -1,0 +1,18 @@
+Comando vscode
+npm init
+npm install express
+npm install cors
+npm install mysql2
+------------------
+npm i express cors mysql2 dotenv prisma @prisma/client
+npm i nodemon
+npx nodemon
+npm i prisma
+npm install @primas/cliente
+npx prisma init --datasource-provider mysql
+npx  prisma migrate dev
+npx prisma 
+npm i express cors dotenv prisma @prisma/client @prisma/adapter-mariadb
+
+atalho pra arrumar código 
+shift alt f
