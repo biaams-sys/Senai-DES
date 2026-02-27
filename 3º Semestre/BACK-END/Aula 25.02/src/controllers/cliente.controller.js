@@ -1,60 +1,98 @@
-const db = require("../data/connection");
+const db = require("../data/prisma");
 
 const cadastrarClientes = async (req, res) => {
     const { nomeCompleto, CPF, email, CNH } = req.body;
+    
+    if (!nomeCompleto || !CPF || !email || !CNH)
+    return res.status(400).json({ erro: "Todos os campos são obrigatórios." });
 
-    const nomeerrado = validarNome(nomeCompleto);
-    if (nomeerrado !== true) {
-        return res.status(400).json({ erro: nomeerrado });
-    }
+    const nomeValido = validarNome(nomeCompleto);
+    if (nomeValido !== true)
+        return res.status(400).json({ erro: nomeValido });
 
-    const CPFerrado = validarCPF(CPF);
-    if (CPFerrado !== true) {
-        return res.status(400).json({ erro: CPFerrado });
-    }
+    const cpfValido = validarCPF(CPF);
+    if (cpfValido !== true)
+        return res.status(400).json({ erro: cpfValido });
 
-    const emailErrado = validarEmail(email);
-    if (emailErrado !== true) {
-        return res.status(400).json({ erro: emailErrado });
-    }
+    const emailValido = validarEmail(email);
+    if (emailValido !== true)
+        return res.status(400).json({ erro: emailValido });
 
-    if (!validarCNH(CNH)) {
-        return res.status(400).json({ erro: "CNH deve começar com número." });
-    }
+    if (!validarCNH(CNH))
+        return res.status(400).json({ erro: "CNH inválida." });
 
-    const [clientes] = await db.query("SELECT * FROM clientes");
+    const novoCliente = await db.cliente.create({
+        data: { nomeCompleto, CPF, email, CNH }
+    });
 
-    if (clientes.some(cliente => cliente.email === email.trim())) {
-        return res.status(400).json({ erro: "Email já cadastrado." });
-    }
-    const [novoCliente] = await db.query(
-        "INSERT INTO clientes VALUES (DEFAULT, ?, ?, ?, ?)",
-        [nomeCompleto, CPF, email, CNH]
-    );
+    res.status(201).json(novoCliente).end();
+};
 
-    const cliente = {
-        id: novoCliente.insertId,
-        nomeCompleto,
-        CPF,
-        email,
-        CNH
-    };
+const listarClientes = async (req, res) => {
+    const clientes = await db.cliente.findMany();
 
-    return res.status(201).json(cliente);
+    res.status(200).json(clientes).end();
+};
+
+const buscarClientes = async (req, res) => {
+    const { id } = req.params;
+
+    const cliente = await db.cliente.findUnique({
+        where: { id: Number(id) }
+    });
+
+    if (!cliente)
+        return res.status(404).json({ erro: "Cliente não encontrado" });
+
+    res.status(200).json(cliente).end();
+};
+
+const atualizarCliente = async (req, res) => {
+    const { id } = req.params;
+    const { nomeCompleto, CPF, email, CNH } = req.body;
+
+    const cliente = await db.cliente.findUnique({
+        where: { id: Number(id) }
+    });
+
+    if (!cliente)
+        return res.status(404).json({ erro: "Cliente não encontrado" });
+
+    const clienteAtualizado = await db.cliente.update({
+        where: { id: Number(id) },
+        data: { nomeCompleto, CPF, email, CNH }
+    });
+
+    res.status(200).json(clienteAtualizado).end();
+};
+
+const excluirCliente = async (req, res) => {
+    const { id } = req.params;
+
+    const cliente = await db.cliente.findUnique({
+        where: { id: Number(id) }
+    });
+
+    if (!cliente)
+        return res.status(404).json({ erro: "Cliente não encontrado" });
+
+    const clienteDeletado = await db.cliente.delete({
+        where: { id: Number(id) }
+    });
+
+    res.status(200).json(clienteDeletado).end();
 };
 
 function validarNome(nomeCompleto) {
     nomeCompleto = nomeCompleto.trim();
 
-    if (nomeCompleto.length === 0) {
+    if (nomeCompleto.length === 0)
         return "O nome completo é obrigatório.";
-    }
 
     let partes = nomeCompleto.split(" ").filter(parte => parte.length > 0);
 
-    if (partes.length < 2) {
+    if (partes.length < 2)
         return "Digite nome e sobrenome.";
-    }
 
     return true;
 }
@@ -62,30 +100,25 @@ function validarNome(nomeCompleto) {
 function validarCPF(CPF) {
     CPF = CPF.replace(/[.-]/g, "");
 
-    if (CPF.length === 0) {
+    if (CPF.length === 0)
         return "CPF é obrigatório.";
-    }
 
-    if (CPF.length !== 11) {
+    if (CPF.length !== 11)
         return "CPF deve ter 11 dígitos.";
-    }
 
     return true;
 }
 
-
 function validarEmail(email) {
     email = email.trim();
 
-    if (!email.includes("@")) {
+    if (!email.includes("@"))
         return "Email deve conter @.";
-    }
 
     const pontos = email.split(".").length - 1;
 
-    if (pontos < 1) {
+    if (pontos < 1)
         return "Email deve conter pelo menos um ponto.";
-    }
 
     return true;
 }
@@ -97,86 +130,10 @@ function validarCNH(cnh) {
     return primeiro >= "0" && primeiro <= "9";
 }
 
-const novoCliente = await db.query("INSERT INTO clientes VALUES (DEFAULT, ?, ?, ?,?)", [nomeCompleto, CPF, email, CNH]);
-
-    const cliente = {
-        id: novoCliente[0].insertId,
-        nomeCompleto: nomeCompleto,
-        CPF: CPF,
-        email: email,
-        CNH: CNH
-    }
-    res.json(cliente).status(201).end();
-
-const listarClientes = async (req, res) => {
-    const [clientes] = await db.query("SELECT * FROM clientes");
-    return res.status(200).json(clientes);
-};
-
-
-const buscarClientes = async (req, res) => {
-    const { id } = req.params;
-
-    const [cliente] = await db.query(
-        "SELECT * FROM clientes WHERE id = ?",
-        [id]
-    );
-
-    if (cliente.length === 0)
-        return res.status(404).json({ erro: "Cliente não encontrado" });
-
-    return res.status(200).json(cliente[0]);
-};
-
-
-
-const atualizarCliente = async (req, res) => {
-    const { id } = req.params;
-    const { nomeCompleto, CPF, email, CNH } = req.body;
-
-    const [clienteExiste] = await db.query(
-        "SELECT * FROM clientes WHERE id = ?",
-        [id]
-    );
-
-    if (clienteExiste.length === 0)
-        return res.status(404).json({ erro: "Cliente não encontrado" });
-
-    await db.query(
-        "UPDATE clientes SET nomeCompleto = ?, CPF = ?, email = ?, CNH = ? WHERE id = ?",
-        [nomeCompleto, CPF, email, CNH, id]
-    );
-
-    return res.status(200).json({ mensagem: "Cliente atualizado" });
-};
-
-
-
-const excluirCliente = async (req, res) => {
-    const { id } = req.params;
-
-    const [clienteExiste] = await db.query(
-        "SELECT * FROM clientes WHERE id = ?",
-        [id]
-    );
-
-    if (clienteExiste.length === 0)
-        return res.status(404).json({ erro: "Cliente não encontrado" });
-
-    await db.query(
-        "DELETE FROM clientes WHERE id = ?",
-        [id]
-    );
-
-    return res.status(200).json({ mensagem: "Cliente deletado" });
-};
-
-
 module.exports = {
     cadastrarClientes,
     listarClientes,
     buscarClientes,
     atualizarCliente,
     excluirCliente
-
-}
+};
