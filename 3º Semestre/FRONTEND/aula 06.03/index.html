@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora - Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Loja - Cadastro de filmes</h1>
+        <button onclick="abrirModal()">+ Novo Filme</button>
+        <input type="text" id="pesquisagen" placeholder="Pesquisar por gênero...">
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ano</th>
+                    <th>Gênero</th>
+                    <th>Duração</th>
+                    <th>Diretor</th>
+                    <th>Classificação</th>
+                    <th>Sinopse</th>
+                    <th>Capa</th>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+    </main>
+    <div id="modalFli" class="modal">
+        <form id="formFli" class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" name="Nome" placeholder="Nome" required>
+            <input type="number" id="ano" min="1888" max="2026" placeholder="Ex: 2014" name="Ano">
+            <select id="genero" name="Genero">
+                <option value="">Selecione um gênero</option>
+                <option value="acao">Ação</option>
+                <option value="comedia">Comédia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+                <option value="romance">Romance</option>
+                <option value="animacao">Animação</option>
+            </select>
+            <input type="text" name="Duracao" placeholder="Duração" required>
+            <input type="text" name="Diretor" placeholder="Diretor" required>
+            <select id="classificacao" name="Classificacao">
+                <option value="">Selecione uma classificação</option>
+                <option value="Livre">Livre</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+            </select>
+            <input type="text" name="Sinopse" placeholder="Sinopse" required>
+            <input type="url" id="capa" name="Capa" placeholder="Cole o link da imagem da capa">
+
+            <div class="modal-buttons">
+                <button type="submit">Salvar</button>
+                <button type="reset" onclick="fecharModal()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
