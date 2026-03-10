@@ -1,0 +1,129 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MaterialApp(home: MainApp()));
+}
+
+class MainApp extends StatefulWidget {
+  const MainApp({super.key});
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController senhaController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    senhaController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Login")),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextFormField(
+                controller: emailController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: "E-mail",
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "O campo do email é obrigatório";
+                  }
+                  if (!value.contains('@')) {
+                    return "Insira um e-mail válido";
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: senhaController,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: "Senha",
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "O campo da senha é obrigatória";
+                  }
+                  if (value.length < 6) {
+                    return "A senha deve ter pelo menos 6 caracteres";
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    if (emailController.text == "joaofeijao@gmail.com" &&
+                        senhaController.text == "feijaojoao") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Paginadois(emailcerto: emailController.text),
+                        ),
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Login e senha errados!')),
+                      );
+                    }
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Preencha todos os campos')),
+                    );
+                  }
+                },
+                child: const Text('Enviar'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Paginadois extends StatelessWidget {
+  final String emailcerto;
+
+  const Paginadois({super.key, required this.emailcerto});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('')),
+      body: Column(
+        children: [
+          Text("Oi João! Seja bem-vindo!"),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text("Voltar"),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
