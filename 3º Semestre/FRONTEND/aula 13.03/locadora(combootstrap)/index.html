@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora - Filmes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 text-secondary">Loja - Cadastro de Filmes</h1>
+            <button class="btn btn-success shadow-sm" data-bs-toggle="modal" data-bs-target="#modalFilme">
+                + Novo Filme
+            </button>
+        </header>
+
+        <main class="card shadow-sm border-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Capa</th>
+                            <th>Nome</th>
+                            <th>Ano</th>
+                            <th>Gênero</th>
+                            <th>Classificação</th>
+                            <th>Sinopse</th>
+                            <th class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFsFl6T5DKmdkTQeHl4sXOe9L73jvUp78zTjvcq7Qeugtw3xZDT0JRruJ9bNSPwE5G6ISQ0ErLHTvRZdjiWt0QZzPQGuTnutURFttRp0Y&s=10" 
+                                     alt="Capa" class="rounded shadow-sm" style="width: 60px; height: 90px; object-fit: cover;">
+                            </td>
+                            <td class="fw-bold">Interestelar</td>
+                            <td>2014</td>
+                            <td>Ficção Científica</td>
+                            <td><span class="badge bg-success">Livre</span></td>
+                            <td class="small text-muted">Exploração espacial e física quântica.</td>
+                            <td class="text-center">
+                                <button class="btn btn-outline-danger btn-sm">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/3/38/The_Batman_poster.jpg/250px-The_Batman_poster.jpg" 
+                                     alt="Capa" class="rounded shadow-sm" style="width: 60px; height: 90px; object-fit: cover;">
+                            </td>
+                            <td class="fw-bold">O Batman</td>
+                            <td>2022</td>
+                            <td>Ação</td>
+                            <td><span class="badge bg-warning text-dark">14</span></td>
+                            <td class="small text-muted">O herói investiga o submundo de Gotham.</td>
+                            <td class="text-center">
+                                <button class="btn btn-outline-danger btn-sm">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgc1YxNVC5eBW70FMmJowrijZAUmOoCVoziYUayk99k7gq7hoBO0Ko1A20fKV2s7rxs3n-FNmTIVo0Ld-P4O2vNDNXy0UzMPPbr9sFvw&s=10" 
+                                     alt="Capa" class="rounded shadow-sm" style="width: 60px; height: 90px; object-fit: cover;">
+                            </td>
+                            <td class="fw-bold">Shrek</td>
+                            <td>2001</td>
+                            <td>Animação</td>
+                            <td><span class="badge bg-success">Livre</span></td>
+                            <td class="small text-muted">Um ogro em uma jornada de resgate.</td>
+                            <td class="text-center">
+                                <button class="btn btn-outline-danger btn-sm">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade" id="modalFilme" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark">Cadastrar Filme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-dark">Título</label>
+                            <input type="text" class="form-control" placeholder="Ex: Matrix">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-dark">Lançamento</label>
+                            <input type="number" class="form-control" placeholder="Ano">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-dark">Gênero</label>
+                            <select class="form-select">
+                                <option selected disabled>Escolha...</option>
+                                <option>Ação</option>
+                                <option>Terror</option>
+                                <option>Romance</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-dark">Sinopse</label>
+                            <textarea class="form-control" rows="2" placeholder="Breve descrição..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Filme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

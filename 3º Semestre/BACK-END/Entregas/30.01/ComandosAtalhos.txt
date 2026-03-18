@@ -1,0 +1,6 @@
+npm i -g backend-aula
+backend-aula -aula gitparty
+npx prisma migrate dev --name init
+npx prisma generate
+backend-aula -models
+backend-aula -insomnia
