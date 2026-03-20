@@ -50,7 +50,7 @@ E o sistema retorna:
 ##  Como executar o projeto
 
 ```bash id="inv123"
-git clone https://github.com/seu-usuario/Investimentos.git
+git clone https://github.com/biaams-sys/investimentos2026.git
 
 ```
 terminal do vscode
