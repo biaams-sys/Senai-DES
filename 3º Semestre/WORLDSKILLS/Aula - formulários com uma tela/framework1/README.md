@@ -23,9 +23,9 @@ E o sistema retorna:
 ##  Prints das telas
 
 <p align="center">
-  <img src="assets/tela1.png" width="250px">
-  <img src="assets/tela2.png" width="250px">
-  <img src="assets/tela3.png" width="250px">
+  <img src="assets/imgs/tela1.png" width="250px">
+  <img src="assets/imgs/tela2.png" width="250px">
+  <img src="assets/imgs/tela3.png" width="250px">
 </p>
 
 ---
