@@ -121,7 +121,7 @@ class _AppState extends State<App> {
               },
             ),
             Text(
-              "Taxa de juros ao mês (0.05):",
+              "Taxa de juros ao mês (ex:5%) :",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20.0,
