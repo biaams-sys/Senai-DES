@@ -47,7 +47,7 @@ E o sistema retorna:
 ##  Como executar o projeto
 
 ```bash
-git clone https://github.com/seu-usuario/Financiamentos2026.git
+git clone https://github.com/biaams-sys/financiamentos2026.git
 ```
 terminal do vscode
 ```
