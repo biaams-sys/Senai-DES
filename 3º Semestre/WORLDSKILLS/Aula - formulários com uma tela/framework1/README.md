@@ -61,12 +61,12 @@ flutter run
 
 ```
 Financiamentos2026/
-│
-├── lib/
 ├── assets/
 │   ├── tela1.png
 │   ├── tela2.png
 │   └── tela3.png
+├── lib/
+    ├── main.dart
 ├── pubspec.yaml
 └── README.md
 ```
