@@ -48,7 +48,9 @@ E o sistema retorna:
 
 ```bash
 git clone https://github.com/seu-usuario/Financiamentos2026.git
-cd Financiamentos2026
+```
+terminal do vscode
+```
 flutter pub get
 flutter run
 ```
