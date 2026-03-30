@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _escala = AnimationController(vsync: this, duration: Duration(seconds: 3))
+    _escala = AnimationController(vsync: this, duration: Duration(seconds: 1))
       ..addListener(() {
         setState(() {
           _es = _escala.value;
@@ -24,7 +24,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
       });
     _escala.forward();
 
-    Timer(Duration(seconds: 3), () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login())));
+    Timer(Duration(seconds: 1), () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login())));
   }
 
   @override
