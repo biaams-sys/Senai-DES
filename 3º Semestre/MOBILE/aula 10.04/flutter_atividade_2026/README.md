@@ -48,6 +48,7 @@ lib/
  └── home.dart
 assets/
  └── foto.png
+```
 
 ##  Screenshots
 
