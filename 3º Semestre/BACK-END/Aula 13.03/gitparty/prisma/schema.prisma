@@ -31,6 +31,7 @@ model Eventos {
   status            StatusEvento @default(ATIVO)
 
   inscricoes inscricoes[]
+  Img Img[]
 }
 
 model inscricoes {
@@ -41,6 +42,18 @@ model inscricoes {
   eventosID      Int
   usuarios       Usuarios       @relation(fields: [usuariosId], references: [id])
   usuariosId     Int
+}
+
+model Img {
+  id Int @id@default(autoincrement())
+  nomeOriginal String 
+  nomeArquivo String
+  mimeType String
+  path String
+  data DateTime @default(now())
+  eventos Eventos @relation(fields: [eventosID],
+  references: [id])
+  eventosID Int
 }
 
 enum StatusInscricao {
