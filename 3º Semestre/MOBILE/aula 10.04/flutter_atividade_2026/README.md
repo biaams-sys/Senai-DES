@@ -60,3 +60,11 @@ assets/
 
 ### Home
 ![Home](assets/screens/screen3.png)
+
+## Rodar rapidamente
+
+```bash
+git clone "link"
+abra a pasta
+flutter pub get
+flutter run -d chrome
