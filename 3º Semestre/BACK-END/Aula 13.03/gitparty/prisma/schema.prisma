@@ -45,14 +45,13 @@ model inscricoes {
 }
 
 model Img {
-  id Int @id@default(autoincrement())
+  id Int @id @default(autoincrement())
   nomeOriginal String 
   nomeArquivo String
   mimeType String
   path String
   data DateTime @default(now())
-  eventos Eventos @relation(fields: [eventosID],
-  references: [id])
+  eventos Eventos @relation(fields: [eventosID], references: [id])
   eventosID Int
 }
 
