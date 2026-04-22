@@ -55,12 +55,12 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
   }
 
   void irParaHome() async {
-    await Navigator.push(
+    if (!mounted) return;
+
+    await Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => Home()),
+      MaterialPageRoute(builder: (context) => const Home()),
     );
-    resetAnimation();
-    entrada();
   }
 
   @override
@@ -73,7 +73,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Papelaria produtos")),
+      appBar: AppBar(title: Text("Lavanderia produtos")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

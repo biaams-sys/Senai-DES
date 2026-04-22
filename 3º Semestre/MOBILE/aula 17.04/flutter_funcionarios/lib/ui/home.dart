@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import '../root/pallet.dart';
 
 class Home extends StatefulWidget {
@@ -13,33 +11,54 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<dynamic> produtos = [];
+  List<Map<String, dynamic>> funcionarios = [];
   int indice = 0;
-
-  ValueChanged<dynamic>? get onChanged => null;
 
   @override
   void initState() {
     super.initState();
-    carrearMockupJSON();
+    carregarMockupJSON();
   }
 
-  Future<void> carrearMockupJSON() async {
-    String dados = await rootBundle.loadString('assets/mockup/produtos.json');
+  Future<void> carregarMockupJSON() async {
+    // Carrega o arquivo JSON
+    final String dados = await rootBundle.loadString('assets/mockup/funcionarios.json');
+    
     setState(() {
-      produtos = json.decode(dados);
+      funcionarios = List<Map<String, dynamic>>.from(json.decode(dados));
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    // Tela de carregamento enquanto o JSON não é processado
+    if (funcionarios.isEmpty) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    // MAPEAMENTO CORRETO DAS VARIÁVEIS (Baseado no seu JSON real)
+    final funcionario = funcionarios[indice];
+    
+    // Antes era 'preco', agora é 'salario'
+    final double salario = (funcionario['salario'] ?? 0).toDouble();
+    
+    // No seu JSON o caminho da imagem está em 'avatar' e não 'img'
+    final String caminhoImagem = funcionario['avatar'] ?? '';
+    
+    // Como não tem 'descricao', vamos usar o 'cargo' e a 'dataContatacao'
+    final String cargo = funcionario['cargo'] ?? 'Funcionário';
+
     return Scaffold(
-      appBar: AppBar(title: Text("Papelaria produtos")),
+      appBar: AppBar(title: const Text("Funcionários da Lavanderia")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 20,
           children: [
+            const SizedBox(height: 20),
+
+            // Dropdown de seleção
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 40),
               decoration: BoxDecoration(
@@ -49,37 +68,41 @@ class _HomeState extends State<Home> {
                   BoxShadow(
                     color: AppColors.p2,
                     blurRadius: 8,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
               padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: DropdownButton<dynamic>(
+              child: DropdownButton<Map<String, dynamic>>(
                 borderRadius: BorderRadius.circular(8),
                 isExpanded: true,
                 underline: const SizedBox.shrink(),
-                value: produtos.isNotEmpty ? produtos[indice] : null,
-                items: produtos
-                    .map(
-                      (produto) => DropdownMenuItem<dynamic>(
-                        value: produto,
-                        child: Text(produto['nome']),
-                      ),
-                    )
-                    .toList(),
+                value: funcionario,
+                items: funcionarios.map((f) {
+                  return DropdownMenuItem<Map<String, dynamic>>(
+                    value: f,
+                    child: Text(f['nome']),
+                  );
+                }).toList(),
                 onChanged: (value) {
                   setState(() {
-                    indice = produtos.indexOf(value);
+                    indice = funcionarios.indexOf(value!);
                   });
                 },
               ),
             ),
+
+            const SizedBox(height: 20),
+
             Text(
-              produtos.isNotEmpty
-                  ? produtos[indice]['nome']
-                  : "Nome do produto",
-              style: Theme.of(context).textTheme.titleMedium,
+              funcionario['nome'],
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
+            Text(cargo, style: const TextStyle(fontSize: 16, color: Colors.grey)),
+
+            const SizedBox(height: 20),
+
+            // Card com imagem e detalhes
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -88,64 +111,48 @@ class _HomeState extends State<Home> {
                   BoxShadow(
                     color: AppColors.p2,
                     blurRadius: 8,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Column(
-                  spacing: 10,
                   children: [
-                    produtos.isNotEmpty
-                        ? Image.network(
-                            produtos[indice]['img'],
-                            width: 200,
-                            errorBuilder:
-                                (
-                                  BuildContext context,
-                                  Object exception,
-                                  StackTrace? stackTrace,
-                                ) =>
-                                    Image.asset('assets/mariana.png', width: 200),
-                          )
-                        : Image.asset(
-                            'assets/icone.png',
-                            height: 200,
-                            width: 200,
-                          ),
-                    Text(
-                      produtos.isNotEmpty
-                          ? produtos[indice]['descricao']
-                          : "Descrição do produto",
+                    // Ajuste para carregar asset local removendo a barra inicial se necessário
+                    Image.asset(
+                      caminhoImagem.startsWith('/') ? caminhoImagem.substring(1) : caminhoImagem,
+                      width: 200,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Icon(Icons.person, size: 100, color: Colors.grey);
+                      },
                     ),
-                    Text(
-                      produtos.isNotEmpty
-                          ? "R\$ ${produtos[indice]['preco'].toStringAsFixed(2).replaceAll('.', ',')}"
-                          : "R\$ 0.00",
-                    ),
+
+                    const SizedBox(height: 10),
+
+                    Text("Salário: R\$ ${salario.toStringAsFixed(2).replaceAll('.', ',')}"),
+                    const SizedBox(height: 5),
+                    Text("Admissão: ${funcionario['dataContatacao']}"),
                   ],
                 ),
               ),
             ),
+
+            const SizedBox(height: 20),
+
+            // Botões de navegação
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
-                  onPressed: indice > 0
-                      ? () => setState(() {
-                          indice--;
-                        })
-                      : null,
-                  child: Text("Anterior"),
+                  onPressed: indice > 0 ? () => setState(() => indice--) : null,
+                  child: const Text("Anterior"),
                 ),
                 ElevatedButton(
-                  onPressed: indice < produtos.length - 1
-                      ? () => setState(() {
-                          indice++;
-                        })
+                  onPressed: indice < funcionarios.length - 1 
+                      ? () => setState(() => indice++) 
                       : null,
-                  child: Text("Proximo"),
+                  child: const Text("Próximo"),
                 ),
               ],
             ),

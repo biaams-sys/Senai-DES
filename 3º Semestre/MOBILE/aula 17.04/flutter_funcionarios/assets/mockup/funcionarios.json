@@ -74,7 +74,7 @@
   {
     "id": 10,
     "nome": "Lucas Ribeiro",
-    "avatar":"/assets/lucas.jpeg",
+    "avatar": "/assets/lucas.jpeg",
     "cargo": "Auxiliar de Lavanderia",
     "salario": 1750.60,
     "dataContatacao": "2024-05-14"
