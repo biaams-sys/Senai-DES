@@ -1,0 +1,52 @@
+[
+  {
+    "texto": "O que foi a Pop Art?",
+    "opcoes": ["Um movimento artístico inspirado na cultura popular", "Um estilo de arte medieval", "Uma técnica de escultura antiga", "Um movimento que utilizava somente esculturas"],
+    "respostaCorreta": 0
+  },
+  {
+    "texto": "Quando surgiu a Pop Art?",
+    "opcoes": ["1960", "1820", "1975", "1995"],
+    "respostaCorreta": 0
+  },
+  {
+    "texto": "Qual artista é um dos principais nomes da Pop Art?",
+    "opcoes": ["Leonardo da Vinci", "Pablo Picasso", "Andy Warhol", "Michelangelo"],
+    "respostaCorreta": 2
+  },
+  {
+    "texto": "Uma característica marcante da Pop Art é:",
+    "opcoes": ["Uso de cores apagadas e temas religiosos", "Uso de imagens de produtos e celebridades", "Pinturas apenas da natureza", "Uso exclusivo de esculturas de pedra"],
+    "respostaCorreta": 1
+  },
+  {
+    "texto": "Qual obra famosa de Andy Warhol?",
+    "opcoes": ["Campbell's Soup Cans", "O Grito", "Céu Estrelado", "Guernica"],
+    "respostaCorreta": 0
+  },
+  {
+    "texto": "A Pop Art utilizava muito elemento de:",
+    "opcoes": ["Pixações em pontos específicos", "Cultura popular e publicidade", "Mitologia Grega", "Desenhos abstratos a tinta"],
+    "respostaCorreta": 1
+  },
+  {
+    "texto": "Qual foi um dos principais objetivos da Pop Art?",
+    "opcoes": ["Copiar técnicas antigas", "Misturar arte alta com cultura popular", "Focar apenas em pinturas clássicas", "Criar esculturas gigantes"],
+    "respostaCorreta": 1
+  },
+  {
+    "texto": "Qual técnica foi muito usada por Andy Warhol?",
+    "opcoes": ["Afresco", "Gravura em madeira", "Serigrafia", "Escultura em mármore"],
+    "respostaCorreta": 2
+  },
+  {
+    "texto": "A Pop Art buscava aproximar a arte de qual tipo de cultura?",
+    "opcoes": ["Cultura elitista", "Cultura exclusivamente clássica", "Cultura popular e de consumo", "Cultura medieval"],
+    "respostaCorreta": 2
+  },
+  {
+    "texto": "Em qual país a Pop Art teve um dos seus maiores desenvolvimentos?",
+    "opcoes": ["França", "Inglaterra", "Estados Unidos", "Itália"],
+    "respostaCorreta": 2
+  }
+]
