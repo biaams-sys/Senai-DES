@@ -108,7 +108,7 @@ function placacerta(placa) {
 
 function marcacerta(marca) {
     marca = (marca || "").trim();
-if (!marca) return "Marca é obrigatória.";
+    if (!marca) return "Marca é obrigatória.";
 
     if (marca.length === 0)
         return "O nome da marca é obrigatório!";
