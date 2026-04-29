@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Admin - Gerenciar Perfumes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-spray-can"></i> Perfumes  da @biaams-sys
+                </h1>
+                <button id="btn-add-perfume" class="btn-primary">
+                    <i class="fas fa-plus"></i> Novo Perfume
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <div class="container">
+
+            <div id="perfumes-grid" class="perfumes-grid">
+
+            </div>
+
+
+    <div id="modal-form" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Novo Perfume</h2>
+                <button id="btn-close-modal" class="btn-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="form-perfume">
+                <div class="form-group">
+                    <label>Nome do Perfume *</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Preço (R$) *</label>
+                    <input type="number" id="preco" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label>Marca *</label>
+                    <select id="marca-id" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Categoria *</label>
+                    <select id="categoria-id" required></select>
+                </div>
+                <div class="form-group">
+                    <label>URL da Imagem</label>
+                    <input type="url" id="imagem-url" placeholder="https://exemplo.com/imagem.jpg">
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="btn-cancelar" class="btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Perfume</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="modal-detalhes" class="modal">
+        <div class="modal-content detalhes-content">
+            <div class="modal-header">
+                <h2 id="detalhes-title">Detalhes do Perfume</h2>
+                <button id="btn-close-detalhes" class="btn-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="detalhes-body" id="detalhes-body">
+
+            </div>
+            <div class="detalhes-actions">
+                <button id="btn-editar" class="btn-warning">
+                    <i class="fas fa-edit"></i> Editar
+                </button>
+                <button id="btn-excluir" class="btn-danger">
+                    <i class="fas fa-trash"></i> Excluir
+                </button>
+                <button id="btn-fechar-detalhes" class="btn-secondary">
+                    <i class="fas fa-times"></i> Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
