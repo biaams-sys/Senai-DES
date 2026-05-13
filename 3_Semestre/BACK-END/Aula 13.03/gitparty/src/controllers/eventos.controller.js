@@ -11,11 +11,16 @@ const cadastrar = async (req, res) => {
 
     res.json(item).status(201).end();
 };
-
 const listar = async (req, res) => {
-    const lista = await prisma.eventos.findMany();
 
-    res.json(lista).status(200).end();
+    const eventos = await prisma.eventos.findMany({
+        include:{
+            Img:true
+        }
+    });
+
+    res.status(200).json(eventos);
+
 };
 
 const buscar = async (req, res) => {

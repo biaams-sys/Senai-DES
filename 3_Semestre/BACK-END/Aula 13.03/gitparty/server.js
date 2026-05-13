@@ -20,6 +20,12 @@ const usuariosRoutes = require('./src/routes/usuarios.routes');
 
 app.use('/usuarios', usuariosRoutes);
 
+const uploadRoutes = require("./src/routes/uploadImage.routes");
+
+app.use("/upload", uploadRoutes);
+
+app.use("/uploads", express.static("uploads"));
+
 
 const PORT = process.env.PORT || 3000;
 
