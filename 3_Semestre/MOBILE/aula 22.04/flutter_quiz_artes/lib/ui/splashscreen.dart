@@ -31,7 +31,6 @@ class _SplashScreenState extends State<PrimeiraTela> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Ícone simples
             Container(
               padding: EdgeInsets.all(40),
               decoration: BoxDecoration(
