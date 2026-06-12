@@ -7,16 +7,30 @@ A identidade visual foi desenvolvida de forma minimalista e limpa, utilizando to
 
 ---
 
-##  Requisitos de Infraestrutura & Tecnologias
+##  Estrutura de Pastas do Projeto
 
-* **IDE Utilizada:** Visual Studio Code (VS Code)
-* **Linguagens Utilizadas:** HTML5, CSS3, JavaScript (ES6+ Nativo)
-* **Ambiente de Execução Back-end:** Node.js
-* **ORM (Persistência):** Prisma ORM
-* **Comunicação Front/Back:** Fetch API (Nativa do JavaScript, sem dependências externas)
-* **SGBD:** MariaDB
-* **Servidor de Aplicação:** Servidor local Node.js (Porta `3000`)
+```text
+├── backend/
+│   ├── prisma/             # Configuração e esquemas do banco de dados
+│   ├── src/                # Código-fonte da API (Rotas e Controladores)
+│   ├── node_modules/       # Dependências instaladas
+│   ├── package.json        # Gerenciador de dependências do Node
+│   └── server.js           # Arquivo principal que roda o servidor
+├── frontend/
+│   ├── index.html          # Painel Principal (Listagem de Quartos)
+│   ├── cadastro-quarto.html# Tela/Modal para novos quartos
+│   ├── reservas.html       # Gerenciamento de reservas por quarto
+│   ├── style.css           # Estilização visual (Tema Rosa Pastel)
+│   └── script.js           # Lógica do Front-end e consumo da API
+└── docs/                   # Relatórios, scripts SQL e Insomnia
+Tecnologias Utilizadas
+Front-end: HTML5, CSS3 e JavaScript Nativo (comunicação via Fetch API e controle de telas com localStorage).
 
+Back-end: Node.js com o framework Express.
+
+Banco de Dados & Persistência: MariaDB gerenciado através do Prisma ORM.
+
+Ambiente de Desenvolvimento: VS Code e Insomnia (para testes de rotas).
 ---
 
 ##  Diagrama de Entidade-Relacionamento (DER) & Regras de Negócio
