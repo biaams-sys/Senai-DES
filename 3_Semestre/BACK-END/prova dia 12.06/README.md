@@ -94,8 +94,4 @@ Tela alimentada de forma segura por dados em cache local, exibindo o histórico 
 
 ##  Desenvolvido por:
 
-* **Bia** / @biaams-sys
-
-```
-
-```
+* **Beatriz** / @biaams-sys
