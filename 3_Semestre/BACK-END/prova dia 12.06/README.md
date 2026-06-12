@@ -76,18 +76,18 @@ npm start
 ### 1. Painel Geral (Listagem de Quartos)
 
 Interface com título estilizado, botão superior de acesso e listagem em formato de tabela exibindo os quartos vindos do banco de dados e ações de controle.
-![Tela Principal](./wireframes/index.png)
+![Tela Principal](./.wireframes/index.png)
 
 ### 2. Cadastro de Quarto
 
 Formulário em modal/tela limpa para inserção de novos quartos enviando os dados em tempo real para a API do Prisma.
-![Cadastro de Quarto](./wireframes/quartos.png)
+![Cadastro de Quarto](./.wireframes/quartos.png)
 
 ### 3. Gerenciamento de Reservas
 
 Tela alimentada de forma segura por dados em cache local, exibindo o histórico de reservas do quarto escolhido e formulário de check-in/check-out.
-![Tela de Reservas](./wireframes/reservas1.png)
-![Tela de Reservas](./wireframes/reservas2.png)
+![Tela de Reservas](./.wireframes/reservas1.png)
+![Tela de Reservas](./.wireframes/reservas2.png)
 
 
 ---
