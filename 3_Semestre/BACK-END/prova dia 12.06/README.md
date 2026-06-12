@@ -7,45 +7,25 @@ A identidade visual foi desenvolvida de forma minimalista e limpa, utilizando to
 
 ---
 
-##  Requisitos de Infraestrutura & Tecnologias
+##  Estrutura de Pastas do Projeto
 
-* **IDE Utilizada:** Visual Studio Code (VS Code)
-* **Linguagens Utilizadas:** HTML5, CSS3, JavaScript (ES6+ Nativo)
-* **Ambiente de Execução Back-end:** Node.js
-* **ORM (Persistência):** Prisma ORM
-* **Comunicação Front/Back:** Fetch API (Nativa do JavaScript, sem dependências externas)
-* **SGBD:** MariaDB
-* **Servidor de Aplicação:** Servidor local Node.js (Porta `3000`)
-
----
-
-##  Diagrama de Entidade-Relacionamento (DER) & Regras de Negócio
-
-O sistema mapeia o fluxo de hospedagem através de um relacionamento clássico de **1:N (Um para Muitos)**:
-
-* **Regra de Negócio:** Um quarto pode possuir várias reservas ao longo do tempo (`1:N`), mas uma reserva específica pertence a apenas um único quarto (`1:1`).
-* **Chave Estrangeira:** A tabela `reservas` carrega o campo `quarto_id`, criando o vínculo direto e restritivo com a tabela `quartos`.
-
-### Estrutura das Tabelas
-
-#### Tabela: `quartos`
-| Campo | Tipo | Atributos | Descrição |
-| :--- | :--- | :--- | :--- |
-| `id` | INT | PK, Auto Increment | Identificador único do quarto |
-| `numero` | VARCHAR(10) | Not Null | Número de identificação do quarto |
-| `tipo` | VARCHAR(50) | Not Null | Tipo do quarto (Ex: Standard, Master, Deluxe) |
-
-#### Tabela: `reservas`
-| Campo | Tipo | Atributos | Descrição |
-| :--- | :--- | :--- | :--- |
-| `id` | INT | PK, Auto Increment | Identificador único da reserva |
-| `hospede` | VARCHAR(100) | Not Null | Nome completo do hóspede |
-| `data_entrada` | DATE | Not Null | Data de check-in |
-| `data_saida` | DATE | Not Null | Data de check-out |
-| `quarto_id` | INT | FK, Not Null | Código do quarto associado |
-
-> **Nota:** O script SQL de população inicial e o arquivo de exportação das requisições do Insomnia para avaliação estão salvos na pasta `./docs`.
-
+```text
+├── api/
+│   ├── prisma/             # Configuração e esquemas do banco de dados
+│   ├── src/                # Código-fonte da API (Rotas e Controladores)
+│   ├── node_modules/       # Dependências instaladas
+│   ├── package.json        # Gerenciador de dependências do Node
+│   └── server.js           # Arquivo principal que roda o servidor
+├── web/
+│   ├── index.html          # Painel Principal (Listagem de Quartos)
+│   ├── quartos.html        # Tela/Modal para novos quartos
+│   ├── reservas.html       # Gerenciamento de reservas por quarto
+│   ├── style.css           # Estilização visual (Tema Rosa Pastel)
+│   └── script.js           # Lógica do Front-end e consumo da API
+└── docs/                   # Scripts SQL e Insomnia
+└── wireframes/             # Foto de referência
+Tecnologias Utilizadas
+Front-end: HTML, CSS e JavaScript.
 ---
 
 ##  Passo a Passo de Execução do Projeto
@@ -91,21 +71,23 @@ npm start
 
 ##  Funcionalidades Visualizadas (Prints das Telas)
 
-> *Substitua os caminhos abaixo pelas imagens dos seus próprios prints na hora do envio definitivo.*
+> 
 
 ### 1. Painel Geral (Listagem de Quartos)
 
 Interface com título estilizado, botão superior de acesso e listagem em formato de tabela exibindo os quartos vindos do banco de dados e ações de controle.
-
+![Tela Principal](./wireframes/index.png)
 
 ### 2. Cadastro de Quarto
 
 Formulário em modal/tela limpa para inserção de novos quartos enviando os dados em tempo real para a API do Prisma.
-
+![Cadastro de Quarto](./wireframes/quartos.png)
 
 ### 3. Gerenciamento de Reservas
 
 Tela alimentada de forma segura por dados em cache local, exibindo o histórico de reservas do quarto escolhido e formulário de check-in/check-out.
+![Tela de Reservas](./wireframes/reservas1.png)
+![Tela de Reservas](./wireframes/reservas2.png)
 
 
 ---
