@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservas do Quarto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Reservas do Quarto: <span id="info-quarto">Carregando...</span></h2>
+    <button class="btn-secondary" onclick="window.location.href='index.html'">Voltar para os Quartos</button>
+
+    <hr>
+    
+    <h3>Cadastrar Nova Reserva</h3>
+    <div class="form-group">
+        <label for="reserva-hospede">Nome do Hóspede:</label>
+        <input type="text" id="reserva-hospede" placeholder="Nome completo">
+    </div>
+    <div class="form-group">
+        <label for="reserva-entrada">Data de Entrada:</label>
+        <input type="date" id="reserva-entrada">
+    </div>
+    <div class="form-group">
+        <label for="reserva-saida">Data de Saída:</label>
+        <input type="date" id="reserva-saida">
+    </div>
+    <button onclick="salvarReserva()">Cadastrar Reserva</button>
+
+    <hr>
+
+    <h3>Listagem de Reservas</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Código da Reserva</th>
+                <th>Nome do Hóspede</th>
+                <th>Data de Entrada</th>
+                <th>Data de Saída</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="lista-reservas">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>s
+</body>
+</html>

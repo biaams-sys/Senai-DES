@@ -1,0 +1,27 @@
+datasource db {
+  provider = "mysql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Quarto {
+  id       Int       @id @default(autoincrement())
+  numero   String    @db.VarChar(10)
+  tipo     String    @db.VarChar(50)
+  reservas Reserva[]
+
+  @@map("quartos")
+}
+
+model Reserva {
+  id           Int      @id @default(autoincrement())
+  hospede      String   @db.VarChar(100)
+  data_entrada DateTime @db.Date 
+  data_saida   DateTime @db.Date 
+  quarto_id    Int
+  quarto       Quarto   @relation(fields: [quarto_id], references: [id], onDelete: Cascade)
+
+  @@map("reservas")
+}

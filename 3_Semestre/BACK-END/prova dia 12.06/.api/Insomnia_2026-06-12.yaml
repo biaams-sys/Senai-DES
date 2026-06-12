@@ -1,0 +1,400 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1770401873921
+  modified: 1770401873921
+  description: ""
+collection:
+  - name: Aula 25.02
+    meta:
+      id: fld_bd7d6743ad924e96b9f4563b3048c987
+      created: 1772189950790
+      modified: 1772189950790
+      sortKey: -1772189950790
+      description: ""
+    children:
+      - name: cliente
+        meta:
+          id: fld_eb911339de97453992f800ff5ef1e9ff
+          created: 1772189950798
+          modified: 1772189950798
+          sortKey: -1772189950798
+          description: ""
+      - name: carro
+        meta:
+          id: fld_c2a3378201314e6bad6477a0f54cc1b1
+          created: 1772189950848
+          modified: 1772189950848
+          sortKey: -1772189950848
+          description: ""
+  - name: gitparty
+    meta:
+      id: fld_ee87f2e9897d4a3f97b731f2679f32c2
+      created: 1773406898679
+      modified: 1773406898679
+      sortKey: -1773406898679
+      description: ""
+    children:
+      - name: Usuarios
+        meta:
+          id: fld_5dcfe44b48ab448f968c9b4b14217d59
+          created: 1773406898687
+          modified: 1776254787538
+          sortKey: -1773406898687
+          description: ""
+      - name: Eventos
+        meta:
+          id: fld_8e825a0529b94e7f8f7bf47ad71008ab
+          created: 1773406898744
+          modified: 1773406898744
+          sortKey: -1773406898744
+          description: ""
+      - name: inscricoes
+        meta:
+          id: fld_7e37743b07b1435a89edd12fbb2099b0
+          created: 1773406898795
+          modified: 1773406898795
+          sortKey: -1773406898795
+          description: ""
+      - name: img
+        meta:
+          id: fld_f292f68557ad4993b06a5fc4aec2e00e
+          created: 1778673964237
+          modified: 1778673964237
+          sortKey: -1778673964237
+          description: ""
+  - name: API-Receitas-2025
+    meta:
+      id: fld_3347de6d748b47fd8bbc9ee8e12e1907
+      created: 1774614953519
+      modified: 1774614953519
+      sortKey: -1774614953519
+      description: ""
+  - name: upload-file
+    meta:
+      id: fld_8ebef3c6ba87457bad8707a08b29c52d
+      created: 1775820997156
+      modified: 1775820997156
+      sortKey: -1775820997156
+      description: ""
+    children:
+      - name: Publicacao
+        meta:
+          id: fld_215ebc66246741ad9011efac91d5d10e
+          created: 1775820997186
+          modified: 1775820997186
+          sortKey: -1775820997186
+          description: ""
+      - name: Imagem
+        meta:
+          id: fld_1895cb454d4f497898156ae981e122bf
+          created: 1775820997222
+          modified: 1775821008771
+          sortKey: -1775820997222
+          description: ""
+  - name: atividade-17.04
+    meta:
+      id: fld_46db5ad5d8924ac5b66084fd126a5b24
+      created: 1776861578589
+      modified: 1776861578589
+      sortKey: -1776861578589
+      description: ""
+    children:
+      - name: categoria
+        meta:
+          id: fld_24a5cf86596946f7823d0840758b0114
+          created: 1776861588922
+          modified: 1776861604525
+          sortKey: -1776861591140
+          description: ""
+      - name: marca
+        meta:
+          id: fld_5ab9ba1656dd427bbb953a6ced016792
+          created: 1776861601196
+          modified: 1776861605693
+          sortKey: -1776861591240
+          description: ""
+      - name: perfume
+        meta:
+          id: fld_15b5b102e1f74aa1bb1983ebf60da2a3
+          created: 1776861626272
+          modified: 1776861626272
+          sortKey: -1776861626272
+          description: ""
+      - name: img perfume
+        meta:
+          id: fld_bb5eed99f6254134bc5400f7bb459603
+          created: 1776861639315
+          modified: 1776861639315
+          sortKey: -1776861639315
+          description: ""
+  - name: API Estacionamento
+    meta:
+      id: fld_e96e7a692b774a1a96ac74c9f20d1187
+      created: 1778068030038
+      modified: 1779285108719
+      sortKey: -1778068030038
+      description: ""
+    children:
+      - name: Estadia
+        meta:
+          id: fld_e87f32fc2f01400a8abe48cc9a3fbb2a
+          created: 1778068046100
+          modified: 1778075884709
+          sortKey: -1778068046100
+          description: ""
+      - name: Automovel
+        meta:
+          id: fld_0539150a903c421090ab6f251a6316f4
+          created: 1778068067467
+          modified: 1778068067467
+          sortKey: -1778068067467
+          description: ""
+  - name: backend dailycheck
+    meta:
+      id: fld_a85d8868317d412db5ba32e820f3c50d
+      created: 1778096847224
+      modified: 1778096871463
+      sortKey: -1778096847224
+      description: ""
+    children:
+      - name: Tarefa
+        meta:
+          id: fld_829e9de9111a4a76b2fff020675300f4
+          created: 1778096847235
+          modified: 1778096847235
+          sortKey: -1778096847235
+          description: ""
+  - name: hotel_db
+    meta:
+      id: fld_fbb22d006afd4a948ef9f3f8df84db1f
+      created: 1781264789366
+      modified: 1781264789366
+      sortKey: -1781264789366
+      description: ""
+    children:
+      - name: quartos
+        meta:
+          id: fld_9113082fe0a44fbd97346d3edce17f8b
+          created: 1781264819660
+          modified: 1781264819660
+          sortKey: -1781264819660
+          description: ""
+        children:
+          - url: http://localhost:3000/quartos/cadastrar
+            name: cadastrar quarto
+            meta:
+              id: req_47e3ed7e4e604cff9fc2fa7776325b85
+              created: 1781264892204
+              modified: 1781267273611
+              isPrivate: false
+              description: ""
+              sortKey: -1781264892204
+            method: POST
+            body:
+              mimeType: application/json
+              text: '{ "numero": "231", "tipo": "Simples" }'
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/quartos/listar
+            name: listar quartos
+            meta:
+              id: req_fba1e7012f164b52848b690deed201cd
+              created: 1781265823884
+              modified: 1781265831131
+              isPrivate: false
+              description: ""
+              sortKey: -1781265823884
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/quartos/excluir/4
+            name: excluir quartos
+            meta:
+              id: req_757c06063c224906b9d7d732106fde5e
+              created: 1781267156174
+              modified: 1781267279755
+              isPrivate: false
+              description: ""
+              sortKey: -1781267156174
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.6.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: reservas
+        meta:
+          id: fld_51b6008d35aa4e64b717a7c4e9e9554e
+          created: 1781264838320
+          modified: 1781264838320
+          sortKey: -1781264838320
+          description: ""
+        children:
+          - url: http://localhost:3000/reservas/cadastrar
+            name: cadastrar reservas
+            meta:
+              id: req_9cb5c8cd2aee4efe8a769d73ec8ffc41
+              created: 1781265859945
+              modified: 1781266833463
+              isPrivate: false
+              description: ""
+              sortKey: -1781265859945
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "hospede": "Clara Rosa",
+                  "data_entrada": "2026-06-12",
+                  "data_saida": "2026-06-14",
+                  "quarto_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/reservas/listar
+            name: listar reservas
+            meta:
+              id: req_a9a024fbf82040bfaf361ca34d1768ae
+              created: 1781266367411
+              modified: 1781267137363
+              isPrivate: false
+              description: ""
+              sortKey: -1781266367411
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.5.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/reservas/listar/quarto/1
+            name: buscar reserva por quarto
+            meta:
+              id: req_2e40558fefb04acdb885c388b14cea3c
+              created: 1781266622605
+              modified: 1781266655831
+              isPrivate: false
+              description: ""
+              sortKey: -1781266367511
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.6.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/reservas/excluir/4
+            name: excluir reserva
+            meta:
+              id: req_f5324d00410c4edda5ecd6174a808968
+              created: 1781266841961
+              modified: 1781267143524
+              isPrivate: false
+              description: ""
+              sortKey: -1781266841961
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.6.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1770401900025
+    modified: 1770402241239
+  cookies:
+    - id: 56e892b3-a295-40f4-815d-6b7d4539daab
+      key: accessToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtaWNoYWVsdyIsImVtYWlsIjoibWljaGFlbC53aWxsaWFtc0B4LmR1bW15anNvbi5jb20iLCJmaXJzdE5hbWUiOiJNaWNoYWVsIiwibGFzdE5hbWUiOiJXaWxsaWFtcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL21pY2hhZWx3LzEyOCIsImlhdCI6MTc3MDQwMjIzOCwiZXhwIjoxNzcwNDA1ODM4fQ.2N--x1CJhBb3p6wCIZucZbTSUbK2cFOyrDrhpzPqoMg
+      domain: dummyjson.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+    - id: eff41087-1fb6-4ec9-a278-6bb4e3561f57
+      key: refreshToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtaWNoYWVsdyIsImVtYWlsIjoibWljaGFlbC53aWxsaWFtc0B4LmR1bW15anNvbi5jb20iLCJmaXJzdE5hbWUiOiJNaWNoYWVsIiwibGFzdE5hbWUiOiJXaWxsaWFtcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL21pY2hhZWx3LzEyOCIsImlhdCI6MTc3MDQwMjIzOCwiZXhwIjoxNzcyOTk0MjM4fQ.HpbSZWMExh5EizwJ-BPVzVHuRP3-8hoSd4TbqsYBqnA
+      domain: dummyjson.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1770401900015
+    modified: 1770401900015
+    isPrivate: false
