@@ -1,0 +1,37 @@
+datasource db {
+  provider = "mysql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  engineType = "binary"
+}
+
+model Professor {
+  id     Int     @id @default(autoincrement())
+  nome   String  @db.VarChar(100)
+  email  String  @unique @db.VarChar(100)
+  senha  String  @db.VarChar(255) // Espaço seguro caso queira usar hash no futuro
+  turmas Turma[]
+
+  @@map("professores")
+}
+
+model Turma {
+  id           Int         @id @default(autoincrement())
+  nome         String      @db.VarChar(50)
+  professor_id Int
+  professor    Professor   @relation(fields: [professor_id], references: [id], onDelete: Cascade)
+  atividades   Atividade[]
+
+  @@map("turmas")
+}
+
+model Atividade {
+  id        Int    @id @default(autoincrement())
+  descricao String @db.VarChar(255)
+  turma_id  Int
+  turma     Turma  @relation(fields: [turma_id], references: [id], onDelete: Cascade)
+
+  @@map("atividades")
+}
