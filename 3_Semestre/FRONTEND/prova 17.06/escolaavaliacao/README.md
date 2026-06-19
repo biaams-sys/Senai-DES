@@ -1,4 +1,4 @@
-# Sistema de Controle de Turmas e Atividades (Padrão SAEP)
+# Sistema de Controle de Turmas e Atividades
 
 ##  Sobre o Projeto
 Este sistema é uma aplicação web full-stack desenvolvida para a gestão de turmas e controle de atividades pedagógicas de professores. O projeto simula o cenário do SAEP, dividindo-se em:
@@ -70,9 +70,6 @@ Como o front-end utiliza apenas tecnologias nativas:
 O arquivo de exportação contendo todos os testes de rotas da API em formato YAML foi salvo na pasta de documentação técnica:
 
 * `./docs/insomnia_export.yaml`
-
-```
 ---
 ###  Desenvolvido por:
 * **Beatriz Albuquerque (@biaams-sys)** 
-```
