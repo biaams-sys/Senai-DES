@@ -71,20 +71,17 @@ O arquivo de exportação contendo todos os testes de rotas da API em formato YA
 
 ---
 
-##  Imagens web
+2. **Tela de Autenticação (Login):** Insira o e-mail e senha criados (Ex: `ana@escola.com` / `senha123`). O sistema criará a sessão no `localStorage` e liberará o painel.
 
-2. **Tela de Autenticação (Login):** ...
-   
-   ![Tela de Login](assets/login.png) 
+![Tela de Login](./assets/login.png)
 
-3. **Painel do Professor:** ...
-   
-   ![Listagem de Turmas](assets/listarturmas.png) 
+3. **Painel do Professor:** Exibe o nome do professor logado e lista dinamicamente apenas as turmas associadas a ele. Permite o cadastro de novas turmas informando o nome.
 
-4. **Visualização de Atividades:** ...
-   
-   ![Listagem de Atividades](assets/listaratividade.png) 
+![Listagem de Turmas](./assets/listarturmas.png)
 
+4. **Visualização de Atividades:** Ao clicar em **Visualizar** em uma turma, o sistema carrega os dados e a lista de atividades daquela turma específica, permitindo cadastrar novas tarefas com descrição.
+
+![Listagem de Atividades](./assets/listaratividade.png)
 ###  Desenvolvido por:
 
 * **Beatriz Albuquerque (@biaams-sys)** 
