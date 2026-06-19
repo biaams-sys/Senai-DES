@@ -1,13 +1,11 @@
-# Sistema de Controle de Turmas e Atividades (Padrão SAEP)
+# Sistema de Controle de Turmas e Atividades
 
 ##  Sobre o Projeto
 Este sistema é uma aplicação web full-stack desenvolvida para a gestão de turmas e controle de atividades pedagógicas de professores. O projeto simula o cenário do SAEP, dividindo-se em:
-* `./api`: Back-end em Node.js com Prisma  e MySQL.
+* `./api`: Back-end em Node.js com Prisma e MySQL, contendo também a exportação das rotas do Insomnia (`.yaml`).
 * `./web`: Front-end puro com `index.html`, `style.css` e `script.js` (usando Fetch API).
-* `./docs`: Pasta contendo a exportação das rotas do Insomnia (`.yaml`).
 
 ---
-
 ##  Ferramentas Necessárias (Apps)
 1. **VS Code** (Editor)
 2. **XAMPP** (Servidor local para o banco de dados MySQL)
@@ -39,7 +37,7 @@ npm i express cors dotenv prisma @prisma/client @prisma/adapter-mariadb && npx p
 
 ---
 
-##  Execução do Front-end
+## Execução do Front-end
 
 Como o front-end utiliza apenas tecnologias nativas:
 
@@ -52,7 +50,7 @@ Como o front-end utiliza apenas tecnologias nativas:
 
 ### Fluxo de Uso e Regras de Negócio
 
-1. **Massa de Dados Inicial:** Importe o arquivo `./docs/insomnia_export.yaml` no seu Insomnia e execute as rotas de cadastro de professores para povoar o banco (obrigatório pelo menos 3 registros).
+1. **Massa de Dados Inicial:** Importe o arquivo `./api/insomnia_export.yaml` no seu Insomnia e execute as rotas de cadastro de professores para povoar o banco (obrigatório pelo menos 3 registros).
 2. **Tela de Autenticação (Login):** Insira o e-mail e senha criados (Ex: `ana@escola.com` / `senha123`). O sistema criará a sessão no `localStorage` e liberará o painel.
 3. **Painel do Professor:** Exibe o nome do professor logado e lista dinamicamente apenas as turmas associadas a ele. Permite o cadastro de novas turmas informando o nome.
 4. **Visualização de Atividades:** Ao clicar em **Visualizar** em uma turma, o sistema carrega os dados e a lista de atividades daquela turma específica, permitindo cadastrar novas tarefas com descrição.
@@ -65,14 +63,25 @@ Como o front-end utiliza apenas tecnologias nativas:
 
 ---
 
-## Massa de Dados e Testes da API (Insomnia)
+##  Massa de Dados e Testes da API (Insomnia)
 
-O arquivo de exportação contendo todos os testes de rotas da API em formato YAML foi salvo na pasta de documentação técnica:
+O arquivo de exportação contendo todos os testes de rotas da API em formato YAML foi salvo junto ao back-end no caminho:
 
-* `./docs/insomnia_export.yaml`
+* `./api/insomnia_export.yaml`
 
-```
 ---
+
+2. **Tela de Autenticação (Login):** Insira o e-mail e senha criados (Ex: `ana@escola.com` / `senha123`). O sistema criará a sessão no `localStorage` e liberará o painel.
+
+![Tela de Login](./web/assets/login.png)
+
+3. **Painel do Professor:** Exibe o nome do professor logado e lista dinamicamente apenas as turmas associadas a ele. Permite o cadastro de novas turmas informando o nome.
+
+![Listagem de Turmas](./web/assets/listarturmas.png)
+
+4. **Visualização de Atividades:** Ao clicar em **Visualizar** em uma turma, o sistema carrega os dados e a lista de atividades daquela turma específica, permitindo cadastrar novas tarefas com descrição.
+
+![Listagem de Atividades](./web/assets/listaratividade.png)
 ###  Desenvolvido por:
+
 * **Beatriz Albuquerque (@biaams-sys)** 
-```
