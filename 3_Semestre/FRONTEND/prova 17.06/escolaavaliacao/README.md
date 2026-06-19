@@ -87,8 +87,4 @@ O arquivo de exportação contendo todos os testes de rotas da API em formato YA
 
 ###  Desenvolvido por:
 
-* **Beatriz Albuquerque (@biaams-sys)** 🚀
-
-```
-
-```
+* **Beatriz Albuquerque (@biaams-sys)** 
