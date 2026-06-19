@@ -73,7 +73,7 @@ O arquivo de exportação contendo todos os testes de rotas da API em formato YA
 
 2. **Tela de Autenticação (Login):** Insira o e-mail e senha criados (Ex: `ana@escola.com` / `senha123`). O sistema criará a sessão no `localStorage` e liberará o painel.
 
-![Tela de Login](./assets/login.png)
+![Tela de Login](/assets/login.png)
 
 3. **Painel do Professor:** Exibe o nome do professor logado e lista dinamicamente apenas as turmas associadas a ele. Permite o cadastro de novas turmas informando o nome.
 
