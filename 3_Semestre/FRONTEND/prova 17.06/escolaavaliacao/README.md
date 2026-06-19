@@ -1,18 +1,12 @@
-Ah, entendi! Peço desculpas, você tem toda razão. Como o Markdown precisa renderizar a imagem usando a tag HTML `<img>` para que ela apareça centralizada e configurada com o tamanho correto no visualizador do GitHub ou do VS Code, vou refazer o código estruturando as imagens do jeito certo.
-
-Aqui está o seu **`README.md`** completo e revisado, com as tags prontas para puxar os prints da sua pasta `assets`:
-
-```markdown
 # Sistema de Controle de Turmas e Atividades
 
-## 📌 Sobre o Projeto
+##  Sobre o Projeto
 Este sistema é uma aplicação web full-stack desenvolvida para a gestão de turmas e controle de atividades pedagógicas de professores. O projeto simula o cenário do SAEP, dividindo-se em:
 * `./api`: Back-end em Node.js com Prisma e MySQL, contendo também a exportação das rotas do Insomnia (`.yaml`).
 * `./web`: Front-end puro com `index.html`, `style.css` e `script.js` (usando Fetch API).
 
 ---
-
-## 🛠️ Ferramentas Necessárias (Apps)
+##  Ferramentas Necessárias (Apps)
 1. **VS Code** (Editor)
 2. **XAMPP** (Servidor local para o banco de dados MySQL)
 3. **Node.js** (Ambiente de execução do back-end)
@@ -21,7 +15,7 @@ Este sistema é uma aplicação web full-stack desenvolvida para a gestão de tu
 
 ---
 
-## 🚀 Instalação e Execução (Back-end)
+##  Instalação e Execução (Back-end)
 
 1. Abra o **XAMPP** e dê **Start** no serviço do **MySQL**.
 2. Acesse o painel do MySQL e crie um banco de dados vazio chamado `turmas_db`.
@@ -43,7 +37,7 @@ npm i express cors dotenv prisma @prisma/client @prisma/adapter-mariadb && npx p
 
 ---
 
-## 💻 Execução do Front-end
+## Execução do Front-end
 
 Como o front-end utiliza apenas tecnologias nativas:
 
@@ -52,7 +46,7 @@ Como o front-end utiliza apenas tecnologias nativas:
 
 ---
 
-## 🎯 Guia de Testes do Sistema
+##  Guia de Testes do Sistema
 
 ### Fluxo de Uso e Regras de Negócio
 
@@ -69,7 +63,7 @@ Como o front-end utiliza apenas tecnologias nativas:
 
 ---
 
-## 📁 Massa de Dados e Testes da API (Insomnia)
+##  Massa de Dados e Testes da API (Insomnia)
 
 O arquivo de exportação contendo todos os testes de rotas da API em formato YAML foi salvo junto ao back-end no caminho:
 
@@ -77,7 +71,21 @@ O arquivo de exportação contendo todos os testes de rotas da API em formato YA
 
 ---
 
-### 🛠️ Desenvolvido por:
+##  Imagens web
+
+2. **Tela de Autenticação (Login):** ...
+   
+   ![Tela de Login](assets/login.png) 
+
+3. **Painel do Professor:** ...
+   
+   ![Listagem de Turmas](assets/listarturmas.png) 
+
+4. **Visualização de Atividades:** ...
+   
+   ![Listagem de Atividades](assets/listaratividade.png) 
+
+###  Desenvolvido por:
 
 * **Beatriz Albuquerque (@biaams-sys)** 🚀
 
