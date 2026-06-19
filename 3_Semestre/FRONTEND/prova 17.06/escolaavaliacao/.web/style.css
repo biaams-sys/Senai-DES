@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f7f6;
+    color: #2c3e50;
+}
+
+/* ==========================================
+   CONTROLE DE TELAS (VIEWS)
+   ========================================== */
+.view {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================
+   TELA DE LOGIN
+   ========================================== */
+#tela-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+}
+
+.card-login {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(22, 160, 133, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.card-login h2 {
+    margin-bottom: 25px;
+    color: #16a085;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0ebd9;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fcfdfe;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #1abc9c;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.2);
+}
+
+/* ==========================================
+   BOTÕES e AÇÕES
+   ========================================== */
+.btn-primary {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(26, 188, 156, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #16a085;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(22, 160, 133, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Ajuste do botão quando está no formulário inline */
+.form-inline .btn-primary {
+    width: auto;
+    white-space: nowrap;
+    padding: 0 25px;
+}
+
+/* ==========================================
+   NAVBAR (HEADER)
+   ========================================== */
+.navbar {
+    background-color: #16a085;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar span {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.btn-sair {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-sair:hover {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* ==========================================
+   LAYOUT DO CONTEÚDO
+   ========================================== */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.actions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f7f6;
+}
+
+.actions-header h2 {
+    font-size: 26px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.form-inline {
+    display: flex;
+    gap: 12px;
+}
+
+.form-inline input {
+    padding: 12px 18px;
+    border: 2px solid #e0ebd9;
+    border-radius: 6px;
+    width: 28px;
+    min-width: 280px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-inline input:focus {
+    border-color: #1abc9c;
+}
+
+/* Voltar para turmas */
+.back-actions {
+    margin-bottom: 10px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: #16a085;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   TABELAS CUSTOMIZADAS
+   ========================================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th {
+    background-color: #f4f9f8;
+    color: #16a085;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: 16px 20px;
+    border-bottom: 3px solid #e6f2f0;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #edf5f3;
+    font-size: 15px;
+    color: #34495e;
+}
+
+.data-table tr:hover {
+    background-color: #fafdfc;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Botões de Ação Dinâmicos */
+.btn-action-del {
+    background-color: #fff;
+    color: #e74c3c;
+    border: 1.5px solid #f8d7da;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: all 0.2s;
+}
+
+.btn-action-del:hover {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.btn-action-view {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-action-view:hover {
+    background-color: #16a085;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Turmas e Atividades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="tela-login" class="view">
+        <div class="card-login">
+            <h2>Bem Vindo</h2>
+            <form id="form-login">
+                <div class="input-group">
+                    <input type="email" id="login-email" placeholder="e-mail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-senha" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-primary">ENTRAR</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="tela-turmas" class="view hidden">
+        <header class="navbar">
+            <span id="nome-professor-turmas">Olá Professor(a) </span>
+            <button onclick="logout()" class="btn-sair">Sair</button>
+        </header>
+
+        <main class="container">
+            <div class="actions-header">
+                <h2>Turmas</h2>
+                <form id="form-cadastrar-turma" class="form-inline">
+                    <input type="text" id="nome-turma" placeholder="Nome da Turma" required>
+                    <button type="submit" class="btn-primary">Cadastrar turma</button>
+                </form>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Nome</th>
+                        <th class="text-right">Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-turmas-body">
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <div id="tela-atividades" class="view hidden">
+        <header class="navbar">
+            <span id="nome-professor-atividades">Olá Professor(a) </span>
+            <button onclick="logout()" class="btn-sair">Sair</button>
+        </header>
+
+        <main class="container">
+            <div class="back-actions">
+                <button onclick="voltarParaTurmas()" class="btn-back">← Voltar para Turmas</button>
+            </div>
+
+            <div class="actions-header">
+                <div>
+                    <h2 id="titulo-turma-atividades">Nome da Turma Selecionada</h2>
+                    <p class="subtitle">Listagem de atividades aplicadas</p>
+                </div>
+                <form id="form-cadastrar-atividade" class="form-inline">
+                    <input type="text" id="descricao-atividade" placeholder="Descrição da Atividade" required>
+                    <button type="submit" class="btn-primary">Cadastrar atividade</button>
+                </form>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Número da atividade</th>
+                        <th>Descrição da atividade</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-atividades-body">
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

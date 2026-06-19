@@ -12,22 +12,25 @@ const cadastrarAtividade = async (req, res) => {
     }
 };
 
-const listarAtividades = async (req, res) => {
+async function listarAtividades(req, res) {
     try {
-        const { turma_id } = req.query;
-        const lista = await prisma.atividade.findMany({
-            where: { turma_id: Number(turma_id) },
+        const { turma_id } = req.params;
+
+        const atividades = await prisma.atividade.findMany({
+            where: {
+                turma_id: Number(turma_id)
+            },
             include: {
-                turma: { select: { nome: true } }
+                turma: true
             }
         });
-        res.json(lista).status(200).end();
-    } catch (error) {
-        res.status(500).json({ error: "Erro ao listar atividades" });
-    }
-};
 
-// ADICIONADO: Excluir atividade para fechar o CRUD
+        return res.status(200).json(atividades);
+    } catch (error) {
+        return res.status(500).json({ error: "Erro ao listar atividades" });
+    }
+}
+
 const excluirAtividade = async (req, res) => {
     try {
         const { id } = req.params;

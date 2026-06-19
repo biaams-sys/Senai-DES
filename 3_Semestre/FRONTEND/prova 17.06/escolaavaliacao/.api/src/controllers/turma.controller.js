@@ -12,17 +12,21 @@ const cadastrarTurma = async (req, res) => {
     }
 };
 
-const listarTurmas = async (req, res) => {
+async function listarTurmas(req, res) {
     try {
-        const { professor_id } = req.query;
-        const lista = await prisma.turma.findMany({
-            where: { professor_id: Number(professor_id) }
+        const { professor_id } = req.params;
+
+        const turmas = await prisma.turma.findMany({
+            where: {
+                professor_id: Number(professor_id)
+            }
         });
-        res.json(lista).status(200).end();
+
+        return res.status(200).json(turmas);
     } catch (error) {
-        res.status(500).json({ error: "Erro ao listar turmas" });
+        return res.status(500).json({ error: "Erro ao listar turmas" });
     }
-};
+}
 
 const excluirTurma = async (req, res) => {
     try {

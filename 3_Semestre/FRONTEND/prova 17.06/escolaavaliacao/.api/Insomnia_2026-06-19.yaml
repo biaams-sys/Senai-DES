@@ -1,0 +1,560 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1770401873921
+  modified: 1770401873921
+  description: ""
+collection:
+  - name: Aula 25.02
+    meta:
+      id: fld_bd7d6743ad924e96b9f4563b3048c987
+      created: 1772189950790
+      modified: 1772189950790
+      sortKey: -1772189950790
+      description: ""
+    children:
+      - name: cliente
+        meta:
+          id: fld_eb911339de97453992f800ff5ef1e9ff
+          created: 1772189950798
+          modified: 1772189950798
+          sortKey: -1772189950798
+          description: ""
+      - name: carro
+        meta:
+          id: fld_c2a3378201314e6bad6477a0f54cc1b1
+          created: 1772189950848
+          modified: 1772189950848
+          sortKey: -1772189950848
+          description: ""
+  - name: gitparty
+    meta:
+      id: fld_ee87f2e9897d4a3f97b731f2679f32c2
+      created: 1773406898679
+      modified: 1773406898679
+      sortKey: -1773406898679
+      description: ""
+    children:
+      - name: Usuarios
+        meta:
+          id: fld_5dcfe44b48ab448f968c9b4b14217d59
+          created: 1773406898687
+          modified: 1776254787538
+          sortKey: -1773406898687
+          description: ""
+      - name: Eventos
+        meta:
+          id: fld_8e825a0529b94e7f8f7bf47ad71008ab
+          created: 1773406898744
+          modified: 1773406898744
+          sortKey: -1773406898744
+          description: ""
+      - name: inscricoes
+        meta:
+          id: fld_7e37743b07b1435a89edd12fbb2099b0
+          created: 1773406898795
+          modified: 1773406898795
+          sortKey: -1773406898795
+          description: ""
+      - name: img
+        meta:
+          id: fld_f292f68557ad4993b06a5fc4aec2e00e
+          created: 1778673964237
+          modified: 1778673964237
+          sortKey: -1778673964237
+          description: ""
+  - name: API-Receitas-2025
+    meta:
+      id: fld_3347de6d748b47fd8bbc9ee8e12e1907
+      created: 1774614953519
+      modified: 1774614953519
+      sortKey: -1774614953519
+      description: ""
+  - name: upload-file
+    meta:
+      id: fld_8ebef3c6ba87457bad8707a08b29c52d
+      created: 1775820997156
+      modified: 1775820997156
+      sortKey: -1775820997156
+      description: ""
+    children:
+      - name: Publicacao
+        meta:
+          id: fld_215ebc66246741ad9011efac91d5d10e
+          created: 1775820997186
+          modified: 1775820997186
+          sortKey: -1775820997186
+          description: ""
+      - name: Imagem
+        meta:
+          id: fld_1895cb454d4f497898156ae981e122bf
+          created: 1775820997222
+          modified: 1775821008771
+          sortKey: -1775820997222
+          description: ""
+  - name: atividade-17.04
+    meta:
+      id: fld_46db5ad5d8924ac5b66084fd126a5b24
+      created: 1776861578589
+      modified: 1776861578589
+      sortKey: -1776861578589
+      description: ""
+    children:
+      - name: categoria
+        meta:
+          id: fld_24a5cf86596946f7823d0840758b0114
+          created: 1776861588922
+          modified: 1776861604525
+          sortKey: -1776861591140
+          description: ""
+      - name: marca
+        meta:
+          id: fld_5ab9ba1656dd427bbb953a6ced016792
+          created: 1776861601196
+          modified: 1776861605693
+          sortKey: -1776861591240
+          description: ""
+      - name: perfume
+        meta:
+          id: fld_15b5b102e1f74aa1bb1983ebf60da2a3
+          created: 1776861626272
+          modified: 1776861626272
+          sortKey: -1776861626272
+          description: ""
+      - name: img perfume
+        meta:
+          id: fld_bb5eed99f6254134bc5400f7bb459603
+          created: 1776861639315
+          modified: 1776861639315
+          sortKey: -1776861639315
+          description: ""
+  - name: API Estacionamento
+    meta:
+      id: fld_e96e7a692b774a1a96ac74c9f20d1187
+      created: 1778068030038
+      modified: 1779285108719
+      sortKey: -1778068030038
+      description: ""
+    children:
+      - name: Estadia
+        meta:
+          id: fld_e87f32fc2f01400a8abe48cc9a3fbb2a
+          created: 1778068046100
+          modified: 1778075884709
+          sortKey: -1778068046100
+          description: ""
+      - name: Automovel
+        meta:
+          id: fld_0539150a903c421090ab6f251a6316f4
+          created: 1778068067467
+          modified: 1778068067467
+          sortKey: -1778068067467
+          description: ""
+  - name: backend dailycheck
+    meta:
+      id: fld_a85d8868317d412db5ba32e820f3c50d
+      created: 1778096847224
+      modified: 1778096871463
+      sortKey: -1778096847224
+      description: ""
+    children:
+      - name: Tarefa
+        meta:
+          id: fld_829e9de9111a4a76b2fff020675300f4
+          created: 1778096847235
+          modified: 1778096847235
+          sortKey: -1778096847235
+          description: ""
+  - name: hotel_db
+    meta:
+      id: fld_fbb22d006afd4a948ef9f3f8df84db1f
+      created: 1781264789366
+      modified: 1781264789366
+      sortKey: -1781264789366
+      description: ""
+    children:
+      - name: quartos
+        meta:
+          id: fld_9113082fe0a44fbd97346d3edce17f8b
+          created: 1781264819660
+          modified: 1781264819660
+          sortKey: -1781264819660
+          description: ""
+      - name: reservas
+        meta:
+          id: fld_51b6008d35aa4e64b717a7c4e9e9554e
+          created: 1781264838320
+          modified: 1781264838320
+          sortKey: -1781264838320
+          description: ""
+  - name: turmas_db
+    meta:
+      id: fld_e1fb4395548548d3a47d77f49074579c
+      created: 1781718992569
+      modified: 1781718992569
+      sortKey: -1781718992569
+      description: ""
+    children:
+      - name: professores
+        meta:
+          id: fld_e578be32b6644c5e86b72dd91e11c77c
+          created: 1781719003216
+          modified: 1781719003216
+          sortKey: -1781719003216
+          description: ""
+        children:
+          - url: http://localhost:3000/professor/cadastrar
+            name: cadastrar prof
+            meta:
+              id: req_97b1a3c0fb7e428a8d54ffb4a71dbf66
+              created: 1781719019712
+              modified: 1781724170205
+              isPrivate: false
+              description: ""
+              sortKey: -1781719019712
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "teste",
+                  "email": "teste@escola.com",
+                  "senha": "senhateste"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.6.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/professor/login
+            name: login prof
+            meta:
+              id: req_7072bdb7fd484f728f67b669a225996f
+              created: 1781720013197
+              modified: 1781720032705
+              isPrivate: false
+              description: ""
+              sortKey: -1781720013197
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "email": "ana@escola.com",
+                  "senha": "senha123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/professor/listar
+            name: listar prof
+            meta:
+              id: req_36a22869e29b4b58ab7654095c067a39
+              created: 1781723677768
+              modified: 1781723767571
+              isPrivate: false
+              description: ""
+              sortKey: -1781723677768
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/professor/atualizar/1
+            name: atualizar prof
+            meta:
+              id: req_320b3969f31948fdb32b062c770c078b
+              created: 1781723798621
+              modified: 1781868048968
+              isPrivate: false
+              description: ""
+              sortKey: -1781723798621
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Ana Lucia",
+                  "senha": "senha123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/professor/excluir/4
+            name: excluir prof
+            meta:
+              id: req_39421013a1774dd0aa9c780c46b3b6ce
+              created: 1781723904864
+              modified: 1781724179310
+              isPrivate: false
+              description: ""
+              sortKey: -1781723904864
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: turmas
+        meta:
+          id: fld_0eea1fa59b384d678dafbf8dec3aa98a
+          created: 1781720062339
+          modified: 1781720062339
+          sortKey: -1781720062339
+          description: ""
+        children:
+          - url: http://localhost:3000/turma/cadastrar
+            name: cadastrar turmas
+            meta:
+              id: req_7228004f33774c8683c780865d3c9100
+              created: 1781720065486
+              modified: 1781868880699
+              isPrivate: false
+              description: ""
+              sortKey: -1781720065486
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Física",
+                  "professor_id": 3
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/turma/listar/2
+            name: listar turmas
+            meta:
+              id: req_b41b84c199dc4fab81c4165646356718
+              created: 1781723184432
+              modified: 1781869282214
+              isPrivate: false
+              description: ""
+              sortKey: -1781723184432
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/turma/excluir/1
+            name: excluir turma
+            meta:
+              id: req_086e13caf8954155a9b1bcef82c0e03f
+              created: 1781723644376
+              modified: 1781723657846
+              isPrivate: false
+              description: ""
+              sortKey: -1781723644376
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/turma/atualizar/1
+            name: atualizar turma
+            meta:
+              id: req_6ff7252042834513b5b5dd968b980dd6
+              created: 1781724200125
+              modified: 1781724304371
+              isPrivate: false
+              description: ""
+              sortKey: -1781724200125
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Desenvolvimento de Sistemas SA01 - TURMA ALTERADA"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: atividade
+        meta:
+          id: fld_fa4835ee85384555b299f8d2dca0a8d1
+          created: 1781723321124
+          modified: 1781723321124
+          sortKey: -1781723321124
+          description: ""
+        children:
+          - url: http://localhost:3000/atividade/cadastrar
+            name: cadastrar atividade
+            meta:
+              id: req_423af585f0514a65bc85568cf13171c4
+              created: 1781723323410
+              modified: 1781723578657
+              isPrivate: false
+              description: ""
+              sortKey: -1781723323410
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                  "descricao": "Entender como funciona investimentos imobiliarios",
+                  "turma_id": 1
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/atividade/listar/5
+            name: listar atividades
+            meta:
+              id: req_65658ad1b55f49e28c9a99f6691306fa
+              created: 1781723610542
+              modified: 1781869369947
+              isPrivate: false
+              description: ""
+              sortKey: -1781723610542
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/atividade/atualizar/2
+            name: atualizar atividade
+            meta:
+              id: req_da36dea70e804022acfd5db03eaa5bfd
+              created: 1781724317914
+              modified: 1781867339745
+              isPrivate: false
+              description: ""
+              sortKey: -1781724317914
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "descricao": "Trignometria algebrica "
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/atividade/excluir/4
+            name: excluir atividade
+            meta:
+              id: req_7c5854a40954444a832fe555b7abbb20
+              created: 1781724356570
+              modified: 1781724378396
+              isPrivate: false
+              description: ""
+              sortKey: -1781724356570
+            method: DELETE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1770401900025
+    modified: 1770402241239
+  cookies:
+    - id: 56e892b3-a295-40f4-815d-6b7d4539daab
+      key: accessToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtaWNoYWVsdyIsImVtYWlsIjoibWljaGFlbC53aWxsaWFtc0B4LmR1bW15anNvbi5jb20iLCJmaXJzdE5hbWUiOiJNaWNoYWVsIiwibGFzdE5hbWUiOiJXaWxsaWFtcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL21pY2hhZWx3LzEyOCIsImlhdCI6MTc3MDQwMjIzOCwiZXhwIjoxNzcwNDA1ODM4fQ.2N--x1CJhBb3p6wCIZucZbTSUbK2cFOyrDrhpzPqoMg
+      domain: dummyjson.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+    - id: eff41087-1fb6-4ec9-a278-6bb4e3561f57
+      key: refreshToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtaWNoYWVsdyIsImVtYWlsIjoibWljaGFlbC53aWxsaWFtc0B4LmR1bW15anNvbi5jb20iLCJmaXJzdE5hbWUiOiJNaWNoYWVsIiwibGFzdE5hbWUiOiJXaWxsaWFtcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL21pY2hhZWx3LzEyOCIsImlhdCI6MTc3MDQwMjIzOCwiZXhwIjoxNzcyOTk0MjM4fQ.HpbSZWMExh5EizwJ-BPVzVHuRP3-8hoSd4TbqsYBqnA
+      domain: dummyjson.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1770401900015
+    modified: 1770401900015
+    isPrivate: false
