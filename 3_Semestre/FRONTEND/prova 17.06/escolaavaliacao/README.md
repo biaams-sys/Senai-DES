@@ -77,7 +77,7 @@ O arquivo de exportação contendo todos os testes de rotas da API em formato YA
 
 3. **Painel do Professor:** Exibe o nome do professor logado e lista dinamicamente apenas as turmas associadas a ele. Permite o cadastro de novas turmas informando o nome.
 
-![Listagem de Turmas](./web/assets/listarturmas.png)
+![Listagem de Turmas](./web/assets/turma.png)
 
 4. **Visualização de Atividades:** Ao clicar em **Visualizar** em uma turma, o sistema carrega os dados e a lista de atividades daquela turma específica, permitindo cadastrar novas tarefas com descrição.
 
