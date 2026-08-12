@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abastecimentos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Histórico de Abastecimentos</h1>
+
+    <button onclick="abrirCadastro()">+</button>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Data</th>
+                <th>Combustível</th>
+                <th>Litros</th>
+                <th>Valor</th>
+                <th>Quilometragem</th>
+                <th>Preço/L</th>
+                <th>Consumo</th>
+                <th></th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+        </tbody>
+
+    </table>
+
+
+    <p>
+        Preço médio por litro:
+        <span id="precoMedio">R$ 0,00</span>
+    </p>
+
+    <p>
+        Consumo médio:
+        <span id="consumoMedio">0,00 km/L</span>
+    </p>
+
+
+    <h2>Gráfico</h2>
+
+    <canvas id="grafico"></canvas>
+
+
+    <div id="modal">
+
+        <h2>Abastecimento</h2>
+
+        <input type="date" id="data">
+
+        <input type="text" id="combustivel" placeholder="Combustível">
+
+        <input type="number" id="litros" placeholder="Litros">
+
+        <input type="number" id="valor_pago" placeholder="Valor pago">
+
+        <input type="number" id="quilometragem" placeholder="Quilometragem">
+
+        <button onclick="cadastrar()">Salvar</button>
+
+        <button onclick="fecharCadastro()">Cancelar</button>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
